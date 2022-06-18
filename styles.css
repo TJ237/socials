@@ -1,0 +1,93 @@
+body {
+	background-color: #2A3235;
+}
+  
+h1 {
+	color: white;
+	text-align: center;
+	font-size: 300%;
+	padding-top: 0%;
+}
+
+h2 {
+	color: #2A3235;
+	text-align: center;
+	font-size: 300%;
+	padding-top: 0%;
+	margin-left: auto;
+	margin-right: auto;
+}
+  
+p {
+	font-family: verdana;
+	font-size: 20px;
+	color: white;
+}
+
+.logo {
+	margin-top: 0%;
+	margin-bottom: 6%;
+	border-radius: 50%;
+}
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.new-center {
+	text-align: center;
+}
+
+.vertical-center {
+	margin: 0;
+  	position: absolute;
+ 	top: 50%;
+  	left: 50%;
+  	-ms-transform: translate(-50%, -50%);
+ 	transform: translate(-50%, -50%);
+}
+
+.button {
+	background-color: whitesmoke;
+	border: none;
+	padding: .5em 1em;
+	color: #2A3235;
+	
+	width: 750px;
+	height: 7em;
+	display:inline-flex;
+	align-items: center;
+	text-align: center;
+
+	margin-bottom: 5%;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	cursor: pointer;
+	position: relative;
+
+	--bg-color: red;
+}
+
+.button.button-bg-slide::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: -1;
+	background-color: var(--bg-color);
+
+	transition: transform 150ms ease-in-out;
+	transform: scaleX(0);
+	transform-origin: center;
+}
+
+.button.button-bg-slide:hover::before {
+	transform: scaleX(1);
+}
+
+.button.button-bg-slide {
+	z-index: 1;
+}
